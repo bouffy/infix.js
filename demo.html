@@ -1,0 +1,60 @@
+<html>
+<head>
+  <script src="infix.js"></script>
+  <style>
+  * {
+    font-family: helvetica, sans-serif;
+  }
+  </style>
+</head>
+<body>
+
+<h1>Custom infix operators for Javascript... sorta</h1>
+
+<div>
+  <h4>Haskell-style array concatenation</h4>
+  <p>_i([1,2,3],'++',[4,5])</p>
+  <p>returns <em>[1,2,3,4,5]</em></p>
+</div>
+
+<div>
+  <h4>Haskell-style cons function</h4>
+  <p>_i(1,':',[2,3])</p>
+  <p>returns <em>[1,2,3]</em></p>
+</div>
+
+<div>
+  <h4>Ruby-style ranges (inclusive)</h4>
+  <p>_i(1,'..',7)</p>
+  <p>returns <em>[1,2,3,4,5,6,7]</em></p>
+  <p>_i('a','..','g')</p>
+  <p>returns <em>['a','b','c','d','e','f','g']</em></p>
+</div>
+
+<div>
+  <h4>Ruby-style ranges (exclusive)</h4>
+  <p>_i(1,'...',7)</p>
+  <p>returns <em>[1,2,3,4,5,6]</em></p>
+  <p>_i('a','...','g')</p>
+  <p>returns <em>['a','b','c','d','e','f']</em></p>
+</div>
+
+<div>
+  <h4>Scala-style power operator</h4>
+  <p>_i(3,'**',3)</p>
+  <p>returns <em>27</em></p>
+</div>
+
+<div>
+  <h4>Haskell-style function composition</h4>
+  <p>
+    <u>If we have:</u><br/>
+    function addTwo(x){ return x + 2; }<br/>
+    function timeTen(x){ return x * 10; }<br/>
+  </p>
+  <p>_i(addTwo,'.',timeTen)(5)</p>
+  <p>returns <em>52</em></p>
+</div>
+
+</body>
+</html>
