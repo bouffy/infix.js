@@ -1,5 +1,5 @@
 
-var _i = (function () {
+var _i_ = (function () {
 
   "use strict";
 
@@ -43,6 +43,18 @@ var _i = (function () {
    * e.g., _i(addTwo, '.', multiplyByFour)(2) === 10
    */
   ops['.'] = function (f, g) { return function (x) { return f(g(x)); }; };
+
+  /*
+   * Unix-style function composition, returns a function g(f(x))
+   *
+   * if there exist functions:
+   *
+   * function addTwo(x){ return x + 2; }
+   * function multiplyByFour(x){ return x * 4; }
+   *
+   * e.g., _i(addTwo, '.', multiplyByFour)(2) === 10
+   */
+  ops['|'] = function (f, g) { return function (x) { return g(f(x)); }; };
 
   /*
    * Ruby-style inclusive range operator e.g,
