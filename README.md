@@ -1,7 +1,16 @@
 infix.js
 ========
 
-Custom infix operators for Javascript (sorta).
+This library was a short-lived attempt (~3 hrs) at simulating custom infix operators in Javascript.  The syntax is kind of ugly, so despite the functional equivalence provided by this style, I'm afraid infix.js is fated to remain a lonely wallflower at the prom.  
+
+Some of the infix operators simulated by the library include:
+
+1. Haskell's ++ array concatenation
+2. Haskell's : "cons" operator
+3. Ruby's inclusive and exclusive ranges .. and ...
+4. Scala's power operator \*\*
+5. Function composition, like Haskell's . (right to left) 
+6. Function composition, like Unix's pipe | (left to right)
 
 *Haskell-style array concatenation*
 
